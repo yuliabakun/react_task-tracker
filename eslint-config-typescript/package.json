@@ -1,0 +1,51 @@
+{
+  "name": "@wemake-services/eslint-config-typescript",
+  "version": "3.1.1",
+  "description": "Strict shareable config for ESLint and TypeScript",
+  "keywords": [
+    "wemake.services",
+    "eslint",
+    "eslint-config",
+    "eslint config"
+  ],
+  "author": "sobolevn <mail@sobolevn.me>",
+  "homepage": "https://github.com/wemake-services/wemake-frontend-styleguide#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wemake-services/wemake-frontend-styleguide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wemake-services/wemake-frontend-styleguide/issues"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">=5.0.0",
+    "@typescript-eslint/parser": ">=5.0.0",
+    "eslint": ">=7.0.0",
+    "eslint-import-resolver-typescript": ">=2.0.0",
+    "eslint-plugin-import": ">=2.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "gitHead": "b63f4ebdb923c0f9e876de25ed3df131ec3f9975",
+  "devDependencies": {
+    "@types/node": "20.11.24",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "@wemake-services/eslint-config-jest": "workspace:^",
+    "eslint": "8.57.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jest": "27.9.0",
+    "jest": "29.7.0",
+    "typescript": "5.3.3"
+  }
+}
