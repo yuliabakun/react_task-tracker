@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { Todo } from '../shared/types'
-import { TodoFilters } from '../shared/data'
+import { TodoFilters, mockedTodos } from '../shared/data'
 
 interface InitialState {
   todos: Todo[]
@@ -8,7 +8,7 @@ interface InitialState {
 }
 
 const initialState: InitialState = {
-  todos: [],
+  todos: mockedTodos,
   activeFilter: TodoFilters.All,
 }
 
@@ -18,6 +18,9 @@ const todosSlice = createSlice({
   reducers: {
     addTodo: (state, action) => {
       state.todos = [action.payload, ...state.todos]
+    },
+    deleteTodo: (state, action) => {
+      state.todos = state.todos.filter(todo => todo.id !== action.payload)
     },
     toggleTodoStatus: (state, action) => {
       const updatedTodos = state.todos.map(todo => {
@@ -36,5 +39,5 @@ const todosSlice = createSlice({
   }
 })
 
-export const { addTodo, toggleTodoStatus, setFilter } = todosSlice.actions
+export const { addTodo, deleteTodo, toggleTodoStatus, setFilter } = todosSlice.actions
 export default todosSlice.reducer

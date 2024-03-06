@@ -1,7 +1,7 @@
 import './index.scss'
-import { Topbar } from './components/Topbar'
-import { TodosList } from './components/TodosList'
-import { Infobar } from './components/Infobar'
+import { Topbar } from './components/Topbar/Topbar'
+import { TodosList } from './components/TodosList/TodosList'
+import { Filterbar } from './components/Filterbar/Filterbar'
 
 export const App = (): JSX.Element => {
   return (
@@ -10,7 +10,7 @@ export const App = (): JSX.Element => {
 
       <TodosList />
 
-      <Infobar />
+      <Filterbar />
     </main>
   )
 }

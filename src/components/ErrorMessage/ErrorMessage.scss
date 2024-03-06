@@ -1,0 +1,22 @@
+.error-message {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
+  background-color: rgba(193, 86, 96, 0.61);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-style: normal;
+  }
+}

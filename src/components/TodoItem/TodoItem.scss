@@ -1,0 +1,63 @@
+.todo-item {
+  padding: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #FFFFFF20;
+    border-radius: 10px;
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+    appearance: none;
+    background: none;
+    border: 2px solid #FFFFFF90;
+    padding: 9px;
+    border-radius: 12px;
+    display: inline-block;
+    position: relative;
+
+    &:checked {
+      background: none;
+      border: 2px solid #FFFFFF90;
+    }
+
+    &:checked:after {
+      content: '\2714';
+      font-size: 14px;
+      position: absolute;
+      top: 0px;
+      left: 3px;
+      color: #FFFFFF90;
+    }
+  }
+}
+
+.todo-item__label {
+  flex-grow: 1;
+
+  &--completed {
+    flex-grow: 1;
+    text-decoration: line-through;
+  }
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    background: none;
+  }
+}

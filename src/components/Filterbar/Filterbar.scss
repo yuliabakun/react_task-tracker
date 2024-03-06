@@ -1,0 +1,42 @@
+@import '../../shared/mixin.scss';
+
+.filterbar {
+  height: 55px;
+  padding: 0 20px;
+  border-top: 2px solid #FFFFFF20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include onTablet {
+    flex-direction: row;
+  }
+
+  &__filters {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__status {
+    font-size: 14px;
+  }
+}
+
+.filter {
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  color: #FFFFFF90;
+  border-radius: 5px;
+  background-color: rgba(23, 32, 70, 0.40);
+
+  &--active {
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    background-color: rgba(23, 32, 70, 0.40);
+  }
+}

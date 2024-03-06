@@ -1,3 +1,5 @@
+@import './shared/mixin.scss';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,18 +8,34 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(45deg, #4158D0, #9599E2 50%, #8BC6EC);
+  background: linear-gradient(45deg, #4158D0, #C850C0 50%, #FFCC70);
 }
 
 #root {
-  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
-  width: 70%;
-}
+  width: 95%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
 
+  @include onTablet {
+    width: 70%;
+    height: 70vh;
+  }
+
+  /* Glassmorphism card effect by https://generator.ui.glass */
+  backdrop-filter: blur(7px) saturate(180%);
+  -webkit-backdrop-filter: blur(7px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.61);
+  border-radius: 12px;
+  border: 2px solid #FFFFFF20;
+}
